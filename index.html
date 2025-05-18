@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAXO VERTRIEB</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #f4f4f4; direction: ltr; }
+    header { background: #083c35; color: #d2a44c; padding: 1rem; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    header p { margin: 0.5rem 0 0; font-style: italic; font-size: 1.2rem; color: white; }
+    nav { text-align: center; margin: 1rem; }
+    nav button { margin: 0 0.5rem; padding: 0.5rem 1rem; font-weight: bold; cursor: pointer; }
+    .logo { display: block; margin: 2rem auto; width: 180px; }
+    section { padding: 2rem; text-align: center; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .gallery img { width: 280px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.15); }
+    .contact { background: #083c35; color: white; padding: 2rem; margin-top: 2rem; }
+  </style>
+  <script>
+    function setLang(lang) {
+      const all = document.querySelectorAll('[data-lang]');
+      all.forEach(el => el.style.display = 'none');
+      const selected = document.querySelectorAll('[data-lang="' + lang + '"]');
+      selected.forEach(el => el.style.display = 'block');
+    }
+    window.onload = () => {
+      setLang('de');
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <h1>SAXO VERTRIEB</h1>
+    <p>Wo Qualität auf Erfahrung trifft</p>
+  </header>
+
+  <nav>
+    <button onclick="setLang('de')">🇩🇪 Deutsch</button>
+    <button onclick="setLang('en')">🇬🇧 English</button>
+    <button onclick="setLang('fa')">🇮🇷 فارسی</button>
+  </nav>
+
+  <img src="logo.jpg" alt="Saxo Logo" class="logo" />
+
+  <section data-lang="de">
+    <h2>Über uns</h2>
+    <p>Wir sind ein innovatives Unternehmen im Bereich der Solarzellentechnologie mit Sitz in Deutschland.</p>
+  </section>
+  <section data-lang="en" style="display:none">
+    <h2>About Us</h2>
+    <p>We are an innovative company in the field of solar cell technology, based in Germany.</p>
+  </section>
+  <section data-lang="fa" style="display:none; direction: rtl;">
+    <h2>درباره ما</h2>
+    <p>ما یک شرکت نوآور در زمینه فناوری سلول‌های خورشیدی هستیم که مقر آن در آلمان قرار دارد.</p>
+  </section>
+
+  <section data-lang="de">
+    <h2>Projekte</h2>
+    <div class="gallery">
+<img src="images/5859405311503354039.jpg" alt="Projektbild" />
+<img src="images/5859405311503354040.jpg" alt="Projektbild" />
+<img src="images/5859405311503354041.jpg" alt="Projektbild" />
+<img src="images/5859405311503354042.jpg" alt="Projektbild" />
+<img src="images/5859405311503354043.jpg" alt="Projektbild" />
+<img src="images/5859405311503354044.jpg" alt="Projektbild" />
+<img src="images/5859405311503354045.jpg" alt="Projektbild" />
+<img src="images/5859405311503354046.jpg" alt="Projektbild" />
+<img src="images/5859405311503354047.jpg" alt="Projektbild" />
+<img src="images/5859405311503354048.jpg" alt="Projektbild" />
+<img src="images/5859405311503354049.jpg" alt="Projektbild" />
+<img src="images/5859405311503354050.jpg" alt="Projektbild" />
+<img src="images/5859405311503354051.jpg" alt="Projektbild" />
+<img src="images/5859405311503354052.jpg" alt="Projektbild" />
+<img src="images/5859405311503354053.jpg" alt="Projektbild" />
+<img src="images/A_screenshot_of_SAXO_VERTRIEB's_company_website_ho.png" alt="Projektbild" />
+<img src="images/Profile3.jpg" alt="Projektbild" />
+
+    </div>
+  </section>
+  <section data-lang="en" style="display:none">
+    <h2>Projects</h2>
+    <div class="gallery">
+<img src="images/5859405311503354039.jpg" alt="Project Image" />
+<img src="images/5859405311503354040.jpg" alt="Project Image" />
+<img src="images/5859405311503354041.jpg" alt="Project Image" />
+<img src="images/5859405311503354042.jpg" alt="Project Image" />
+<img src="images/5859405311503354043.jpg" alt="Project Image" />
+<img src="images/5859405311503354044.jpg" alt="Project Image" />
+<img src="images/5859405311503354045.jpg" alt="Project Image" />
+<img src="images/5859405311503354046.jpg" alt="Project Image" />
+<img src="images/5859405311503354047.jpg" alt="Project Image" />
+<img src="images/5859405311503354048.jpg" alt="Project Image" />
+<img src="images/5859405311503354049.jpg" alt="Project Image" />
+<img src="images/5859405311503354050.jpg" alt="Project Image" />
+<img src="images/5859405311503354051.jpg" alt="Project Image" />
+<img src="images/5859405311503354052.jpg" alt="Project Image" />
+<img src="images/5859405311503354053.jpg" alt="Project Image" />
+<img src="images/A_screenshot_of_SAXO_VERTRIEB's_company_website_ho.png" alt="Project Image" />
+<img src="images/Profile3.jpg" alt="Project Image" />
+
+    </div>
+  </section>
+  <section data-lang="fa" style="display:none; direction: rtl;">
+    <h2>پروژه‌ها</h2>
+    <div class="gallery">
+<img src="images/5859405311503354039.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354040.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354041.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354042.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354043.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354044.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354045.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354046.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354047.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354048.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354049.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354050.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354051.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354052.jpg" alt="تصویر پروژه" />
+<img src="images/5859405311503354053.jpg" alt="تصویر پروژه" />
+<img src="images/A_screenshot_of_SAXO_VERTRIEB's_company_website_ho.png" alt="تصویر پروژه" />
+<img src="images/Profile3.jpg" alt="تصویر پروژه" />
+
+    </div>
+  </section>
+
+  <section class="contact" data-lang="de">
+    <h2>Kontakt</h2>
+    <p><strong>Telefon:</strong> 017684362604</p>
+    <p><strong>Email:</strong> info@saxo-vertrieb.de</p>
+  </section>
+  <section class="contact" data-lang="en" style="display:none">
+    <h2>Contact</h2>
+    <p><strong>Phone:</strong> 017684362604</p>
+    <p><strong>Email:</strong> info@saxo-vertrieb.de</p>
+  </section>
+  <section class="contact" data-lang="fa" style="display:none; direction: rtl;">
+    <h2>تماس با ما</h2>
+    <p><strong>تلفن:</strong> ۰۱۷۶۸۴۳۶۲۶۰۴</p>
+    <p><strong>ایمیل:</strong> info@saxo-vertrieb.de</p>
+  </section>
+</body>
+</html>
