@@ -1,302 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAXO VERTRIEB</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; background: #f9f9f9; color: #333; }
-    header {
-      background-color: #083c35;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    header h1 { font-size: 1.8rem; }
-    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .lang-select select {
-      padding: 0.3rem;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-    main { padding: 2rem; }
-    .hidden { display: none !important; }
-    .gallery-slider {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: 2rem auto;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    .slides img {
-      width: 100%;
-      flex-shrink: 0;
-    }
-    .slider-buttons {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    .slider-buttons button {
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      background-color: #083c35;
-      color: white;
-      cursor: pointer;
-    }
-    .calendly-inline-widget {
-      min-width: 320px;
-      height: 700px;
-      margin-top: 2rem;
-    }
-    .map-container iframe {
-      width: 100%;
-      height: 350px;
-      border: none;
-      margin-top: 1rem;
-      border-radius: 8px;
-    }
-    video {
-      width: 100%;
-      max-width: 800px;
-      margin: 2rem auto;
-      display: block;
-      border-radius: 10px;
-    }
-    [dir="rtl"] { text-align: right; }
-  </style>
-  <script>
-    function switchLanguage(lang) {
-      document.body.setAttribute('data-current-lang', lang);
-      document.querySelectorAll('[data-lang]').forEach(el => {
-        el.classList.add('hidden');
-      });
-      document.querySelectorAll('[data-lang][data-section].active').forEach(el => {
-        if (el.dataset.lang === lang) el.classList.remove('hidden');
-      });
-      if(lang === 'fa') {
-        document.body.setAttribute('dir', 'rtl');
-      } else {
-        document.body.setAttribute('dir', 'ltr');
-      }
-    }
-
-    function switchSection(section) {
-      const lang = document.body.getAttribute('data-current-lang') || 'de';
-      document.querySelectorAll('[data-section]').forEach(el => {
-        el.classList.remove('active');
-        el.classList.add('hidden');
-      });
-      document.querySelectorAll('[data-section=\"' + section + '\"][data-lang=\"' + lang + '\"]').forEach(el => {
-        el.classList.add('active');
-        el.classList.remove('hidden');
-      });
-    }
-
-    // اسلایدر عکس‌ها
-    let currentSlide = 0;
-    function showSlide(index) {
-      const slides = document.querySelector('.slides');
-      const totalSlides = slides.children.length;
-      currentSlide = (index + totalSlides) % totalSlides;
-      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
-
-    window.onload = () => {
-      switchLanguage('de');
-      switchSection('home');
-      showSlide(0);
-    };
-  </script>
 </head>
 <body>
-  <header>
-    <h1>SAXO VERTRIEB</h1>
-    <nav>
-      <a onclick="switchSection('home')">🏠</a>
-      <a onclick="switchSection('about')">ℹ️</a>
-      <a onclick="switchSection('projects')">🔧</a>
-      <a onclick="switchSection('contact')">📞</a>
-      <a onclick="switchSection('booking')">📅</a>
-    </nav>
-    <div class="lang-select">
-      <select onchange="switchLanguage(this.value)">
-        <option value="de">🇩🇪 Deutsch</option>
-        <option value="en">🇬🇧 English</option>
-        <option value="fa">🇮🇷 فارسی</option>
-      </select>
-    </div>
-  </header>
-  <main>
-<!-- خانه -->
-<section data-section="home" data-lang="de">
-  <h2>Startseite</h2>
-  <p>Willkommen auf der offiziellen Website von SAXO VERTRIEB.</p>
-  <video controls>
+  <h1>SAXO VERTRIEB</h1>
+  <video autoplay muted playsinline loop style="width: 100%; max-width: 800px;">
     <source src="videos/video5859405311047112939.mp4" type="video/mp4">
-    Ihr Browser unterstützt kein Video.
   </video>
-</section>
-<section data-section="home" data-lang="en" class="hidden">
-  <h2>Home</h2>
-  <p>Welcome to the official website of SAXO VERTRIEB.</p>
-  <video controls>
-    <source src="videos/video5859405311047112939.mp4" type="video/mp4">
-    Your browser does not support video.
-  </video>
-</section>
-<section data-section="home" data-lang="fa" class="hidden">
-  <h2>خانه</h2>
-  <p>به وب‌سایت رسمی SAXO VERTRIEB خوش آمدید.</p>
-  <video controls>
-    <source src="videos/video5859405311047112939.mp4" type="video/mp4">
-    مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
-  </video>
-</section>
-
-<!-- درباره ما -->
-<section data-section="about" data-lang="de" class="hidden">
-  <h2>Über uns</h2>
-  <p>Wir sind ein deutsches Unternehmen, spezialisiert auf Solarzellentechnologie.</p>
-</section>
-<section data-section="about" data-lang="en" class="hidden">
-  <h2>About Us</h2>
-  <p>We are a German company specializing in solar cell technology.</p>
-</section>
-<section data-section="about" data-lang="fa" class="hidden">
-  <h2>درباره ما</h2>
-  <p>ما یک شرکت آلمانی هستیم که در زمینه فناوری سلول‌های خورشیدی تخصص دارد.</p>
-</section>
-
-<!-- پروژه‌ها با اسلایدر -->
-<section data-section="projects" data-lang="de" class="hidden">
-  <h2>Projekte</h2>
-  <div class="gallery-slider">
-    <div class="slides">
-      <img src="images/5859405311503354041.jpg" alt="Projekt 1">
-      <img src="images/5859405311503354042.jpg" alt="Projekt 2">
-      <img src="images/5859405311503354043.jpg" alt="Projekt 3">
-      <img src="images/5859405311503354044.jpg" alt="Projekt 4">
-      <img src="images/5859405311503354045.jpg" alt="Projekt 5">
-    </div>
+  <div class="gallery">
+    <img src="images/5859405311503354039.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354040.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354041.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354042.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354043.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354044.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354045.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354046.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354047.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354048.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354049.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354050.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354051.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354052.jpg" alt="Project" style="width: 200px;">
+<img src="images/5859405311503354053.jpg" alt="Project" style="width: 200px;">
   </div>
-  <div class="slider-buttons">
-    <button onclick="showSlide(currentSlide - 1)">⟵</button>
-    <button onclick="showSlide(currentSlide + 1)">⟶</button>
-  </div>
-</section>
-<section data-section="projects" data-lang="en" class="hidden">
-  <h2>Projects</h2>
-  <div class="gallery-slider">
-    <div class="slides">
-      <img src="images/5859405311503354041.jpg" alt="Project 1">
-      <img src="images/5859405311503354042.jpg" alt="Project 2">
-      <img src="images/5859405311503354043.jpg" alt="Project 3">
-      <img src="images/5859405311503354044.jpg" alt="Project 4">
-      <img src="images/5859405311503354045.jpg" alt="Project 5">
-    </div>
-  </div>
-  <div class="slider-buttons">
-    <button onclick="showSlide(currentSlide - 1)">⟵</button>
-    <button onclick="showSlide(currentSlide + 1)">⟶</button>
-  </div>
-</section>
-<section data-section="projects" data-lang="fa" class="hidden">
-  <h2>پروژه‌ها</h2>
-  <div class="gallery-slider">
-    <div class="slides">
-      <img src="images/5859405311503354041.jpg" alt="پروژه ۱">
-      <img src="images/5859405311503354042.jpg" alt="پروژه ۲">
-      <img src="images/5859405311503354043.jpg" alt="پروژه ۳">
-      <img src="images/5859405311503354044.jpg" alt="پروژه ۴">
-      <img src="images/5859405311503354045.jpg" alt="پروژه ۵">
-    </div>
-  </div>
-  <div class="slider-buttons">
-    <button onclick="showSlide(currentSlide - 1)">⟵</button>
-    <button onclick="showSlide(currentSlide + 1)">⟶</button>
-  </div>
-</section>
-<!-- تماس با ما -->
-<section data-section="contact" data-lang="de" class="hidden">
-  <h2>Kontakt</h2>
-  <p><strong>Adresse:</strong> Bergstraße 49, 01744 Dippoldiswalde</p>
-  <p><strong>Telefon:</strong> 017684362604</p>
-  <p><strong>Projektanfragen:</strong> info@saxo-vertrieb.de</p>
-  <p><strong>Partner & Bearbeitung:</strong> partner@saxo-vertrieb.de</p>
-  <p><strong>Backoffice & Sonstiges:</strong> backoffice@saxo-vertrieb.de</p>
-  <div class="map-container">
-    <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed"></iframe>
-  </div>
-</section>
-
-<section data-section="contact" data-lang="en" class="hidden">
-  <h2>Contact</h2>
-  <p><strong>Address:</strong> Bergstraße 49, 01744 Dippoldiswalde</p>
-  <p><strong>Phone:</strong> 017684362604</p>
-  <p><strong>Project Inquiries:</strong> info@saxo-vertrieb.de</p>
-  <p><strong>Partners & Projects:</strong> partner@saxo-vertrieb.de</p>
-  <p><strong>Backoffice & Others:</strong> backoffice@saxo-vertrieb.de</p>
-  <div class="map-container">
-    <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed"></iframe>
-  </div>
-</section>
-
-<section data-section="contact" data-lang="fa" class="hidden">
-  <h2>تماس با ما</h2>
-  <p><strong>آدرس:</strong> برگ‌اشتراسه ۴۹، ۰۱۷۴۴ دیپولدیسوالده</p>
-  <p><strong>تلفن:</strong> ۰۱۷۶۸۴۳۶۲۶۰۴</p>
-  <p><strong>درخواست پروژه:</strong> info@saxo-vertrieb.de</p>
-  <p><strong>همکاری و اجرای پروژه:</strong> partner@saxo-vertrieb.de</p>
-  <p><strong>سایر امور و پشتیبانی:</strong> backoffice@saxo-vertrieb.de</p>
-  <div class="map-container">
-    <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed"></iframe>
-  </div>
-</section>
-
-<!-- مشاوره سریع -->
-<section data-section="booking" data-lang="de" class="hidden">
-  <h2>Schnelle Beratung</h2>
-  <p>Reservieren Sie Ihren Wunschtermin online:</p>
-  <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
-</section>
-
-<section data-section="booking" data-lang="en" class="hidden">
-  <h2>Quick Consultation</h2>
-  <p>Book your preferred consultation slot online:</p>
-  <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
-</section>
-
-<section data-section="booking" data-lang="fa" class="hidden">
-  <h2>مشاوره سریع</h2>
-  <p>برای رزرو نوبت مشاوره از فرم زیر استفاده کنید:</p>
-  <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
-</section>
-
-</main>
-
-<footer>
-  <p>© 2025 SAXO VERTRIEB. Alle Rechte vorbehalten.</p>
-</footer>
 </body>
 </html>
