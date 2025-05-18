@@ -18,14 +18,15 @@
       flex-wrap: wrap;
     }
     header h1 { font-size: 1.8rem; }
-    nav { display: flex; gap: 1.5rem; }
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-    }
-    .lang-select {
-      margin-left: auto;
+      cursor: pointer;
     }
     .lang-select select {
       padding: 0.3rem;
@@ -33,7 +34,7 @@
       border-radius: 5px;
     }
     main { padding: 2rem; }
-    .hidden { display: none; }
+    .hidden { display: none !important; }
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -57,11 +58,12 @@
   </style>
   <script>
     function switchLanguage(lang) {
+      document.body.setAttribute('data-current-lang', lang);
       document.querySelectorAll('[data-lang]').forEach(el => {
         el.classList.add('hidden');
       });
-      document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => {
-        el.classList.remove('hidden');
+      document.querySelectorAll('[data-lang][data-section].active').forEach(el => {
+        if (el.dataset.lang === lang) el.classList.remove('hidden');
       });
       if(lang === 'fa') {
         document.body.setAttribute('dir', 'rtl');
@@ -69,16 +71,33 @@
         document.body.setAttribute('dir', 'ltr');
       }
     }
-    window.onload = () => switchLanguage('de');
+
+    function switchSection(section) {
+      const lang = document.body.getAttribute('data-current-lang') || 'de';
+      document.querySelectorAll('[data-section]').forEach(el => {
+        el.classList.remove('active');
+        el.classList.add('hidden');
+      });
+      document.querySelectorAll('[data-section="' + section + '"][data-lang="' + lang + '"]').forEach(el => {
+        el.classList.add('active');
+        el.classList.remove('hidden');
+      });
+    }
+
+    window.onload = () => {
+      switchLanguage('de');
+      switchSection('home');
+    };
   </script>
 </head>
 <body>
   <header>
     <h1>SAXO VERTRIEB</h1>
     <nav>
-      <a href="#" onclick="switchLanguage('de')" data-lang="de">Startseite</a>
-      <a href="#" onclick="switchLanguage('en')" data-lang="en">Home</a>
-      <a href="#" onclick="switchLanguage('fa')" data-lang="fa">خانه</a>
+      <a onclick="switchSection('home')">🏠</a>
+      <a onclick="switchSection('about')">ℹ️</a>
+      <a onclick="switchSection('projects')">🔧</a>
+      <a onclick="switchSection('contact')">📞</a>
     </nav>
     <div class="lang-select">
       <select onchange="switchLanguage(this.value)">
@@ -90,34 +109,47 @@
   </header>
 
   <main>
-    <section data-lang="de">
-      <h2>Über uns</h2>
-      <p>Wir sind ein deutsches Unternehmen, das sich auf innovative Solarzellentechnologien spezialisiert hat.</p>
+    <section data-section="home" data-lang="de">
+      <h2>Startseite</h2>
+      <p>Willkommen auf der offiziellen Website von SAXO VERTRIEB.</p>
     </section>
-    <section data-lang="en" class="hidden">
-      <h2>About Us</h2>
-      <p>We are a German company specialized in innovative solar cell technologies.</p>
+    <section data-section="home" data-lang="en" class="hidden">
+      <h2>Home</h2>
+      <p>Welcome to the official website of SAXO VERTRIEB.</p>
     </section>
-    <section data-lang="fa" class="hidden">
-      <h2>درباره ما</h2>
-      <p>ما یک شرکت آلمانی هستیم که در زمینه فناوری‌های نوآورانه سلول‌های خورشیدی تخصص دارد.</p>
+    <section data-section="home" data-lang="fa" class="hidden">
+      <h2>خانه</h2>
+      <p>به وب‌سایت رسمی SAXO VERTRIEB خوش آمدید.</p>
     </section>
 
-    <section data-lang="de">
+    <section data-section="about" data-lang="de" class="hidden">
+      <h2>Über uns</h2>
+      <p>Wir sind ein deutsches Unternehmen, spezialisiert auf Solarzellentechnologie.</p>
+    </section>
+    <section data-section="about" data-lang="en" class="hidden">
+      <h2>About Us</h2>
+      <p>We are a German company specializing in solar cell technology.</p>
+    </section>
+    <section data-section="about" data-lang="fa" class="hidden">
+      <h2>درباره ما</h2>
+      <p>ما یک شرکت آلمانی هستیم که در زمینه فناوری سلول‌های خورشیدی تخصص دارد.</p>
+    </section>
+
+    <section data-section="projects" data-lang="de" class="hidden">
       <h2>Projekte</h2>
       <div class="gallery">
         <img src="images/5859405311503354041.jpg" alt="Projekt 1">
         <img src="images/5859405311503354042.jpg" alt="Projekt 2">
       </div>
     </section>
-    <section data-lang="en" class="hidden">
+    <section data-section="projects" data-lang="en" class="hidden">
       <h2>Projects</h2>
       <div class="gallery">
         <img src="images/5859405311503354041.jpg" alt="Project 1">
         <img src="images/5859405311503354042.jpg" alt="Project 2">
       </div>
     </section>
-    <section data-lang="fa" class="hidden">
+    <section data-section="projects" data-lang="fa" class="hidden">
       <h2>پروژه‌ها</h2>
       <div class="gallery">
         <img src="images/5859405311503354041.jpg" alt="پروژه ۱">
@@ -125,18 +157,25 @@
       </div>
     </section>
 
-    <section data-lang="de">
+    <section data-section="contact" data-lang="de" class="hidden">
       <h2>Kontakt</h2>
       <p><strong>Telefon:</strong> 017684362604</p>
       <p><strong>Email:</strong> info@saxo-vertrieb.de</p>
     </section>
-    <section data-lang="en" class="hidden">
+    <section data-section="contact" data-lang="en" class="hidden">
       <h2>Contact</h2>
       <p><strong>Phone:</strong> 017684362604</p>
       <p><strong>Email:</strong> info@saxo-vertrieb.de</p>
     </section>
-    <section data-lang="fa" class="hidden">
+    <section data-section="contact" data-lang="fa" class="hidden">
       <h2>تماس با ما</h2>
       <p><strong>تلفن:</strong> ۰۱۷۶۸۴۳۶۲۶۰۴</p>
-      <p><strong>ایمیل:</strong> info@saxo-
-        
+      <p><strong>ایمیل:</strong> info@saxo-vertrieb.de</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SAXO VERTRIEB. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>
