@@ -21,7 +21,8 @@
     header h1 { font-size: 1.8rem; }
     nav {
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
@@ -60,6 +61,13 @@
       min-width: 320px;
       height: 700px;
       margin-top: 2rem;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      margin-top: 1rem;
+      border-radius: 8px;
     }
   </style>
   <script>
@@ -104,6 +112,7 @@
       <a onclick="switchSection('about')">ℹ️</a>
       <a onclick="switchSection('projects')">🔧</a>
       <a onclick="switchSection('contact')">📞</a>
+      <a onclick="switchSection('booking')">📅</a>
     </nav>
     <div class="lang-select">
       <select onchange="switchLanguage(this.value)">
@@ -165,17 +174,45 @@
 
     <section data-section="contact" data-lang="de" class="hidden">
       <h2>Kontakt</h2>
-      <p>Reservieren Sie einen Beratungstermin:</p>
-      <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
+      <p><strong>Adresse:</strong> Bergstraße 49, 01744 Dippoldiswalde</p>
+      <p><strong>Telefon:</strong> 017684362604</p>
+      <p><strong>Email:</strong> info@saxo-vertrieb.de</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed"></iframe>
+      </div>
     </section>
     <section data-section="contact" data-lang="en" class="hidden">
       <h2>Contact</h2>
-      <p>Book your consultation now:</p>
-      <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
+      <p><strong>Address:</strong> Bergstraße 49, 01744 Dippoldiswalde</p>
+      <p><strong>Phone:</strong> 017684362604</p>
+      <p><strong>Email:</strong> info@saxo-vertrieb.de</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed"></iframe>
+      </div>
     </section>
     <section data-section="contact" data-lang="fa" class="hidden">
       <h2>تماس با ما</h2>
-      <p>جهت رزرو وقت مشاوره از فرم زیر استفاده کنید:</p>
+      <p><strong>آدرس:</strong> برگ‌اشتراسه ۴۹، ۰۱۷۴۴ دیپولدیسوالده</p>
+      <p><strong>تلفن:</strong> ۰۱۷۶۸۴۳۶۲۶۰۴</p>
+      <p><strong>ایمیل:</strong> info@saxo-vertrieb.de</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed"></iframe>
+      </div>
+    </section>
+
+    <section data-section="booking" data-lang="de" class="hidden">
+      <h2>Schnelle Beratung</h2>
+      <p>Reservieren Sie Ihren Wunschtermin online:</p>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
+    </section>
+    <section data-section="booking" data-lang="en" class="hidden">
+      <h2>Quick Consultation</h2>
+      <p>Book your preferred consultation slot online:</p>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
+    </section>
+    <section data-section="booking" data-lang="fa" class="hidden">
+      <h2>مشاوره سریع</h2>
+      <p>برای رزرو نوبت مشاوره از فرم زیر استفاده کنید:</p>
       <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
     </section>
   </main>
