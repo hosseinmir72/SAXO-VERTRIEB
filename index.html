@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SAXO VERTRIEB</title>
+  <title>SAXO VERTRIEB UG</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <style>
@@ -14,12 +14,16 @@
       color: white;
       padding: 1rem 2rem;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      flex-wrap: wrap;
     }
-    header h1 { font-size: 1.8rem; }
-    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    header h1 { font-size: 2rem; margin-bottom: 0.2rem; }
+    header p { font-style: italic; font-size: 1rem; color: #ccc; }
+    nav {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
     nav a {
       color: white;
       text-decoration: none;
@@ -30,6 +34,7 @@
       padding: 0.3rem;
       font-weight: bold;
       border-radius: 5px;
+      margin-top: 0.5rem;
     }
     main { padding: 2rem; }
     .hidden { display: none !important; }
@@ -109,7 +114,7 @@
         el.classList.remove('active');
         el.classList.add('hidden');
       });
-      document.querySelectorAll('[data-section=\"' + section + '\"][data-lang=\"' + lang + '\"]').forEach(el => {
+      document.querySelectorAll('[data-section="' + section + '"][data-lang="' + lang + '"]').forEach(el => {
         el.classList.add('active');
         el.classList.remove('hidden');
       });
@@ -132,7 +137,8 @@
 </head>
 <body>
   <header>
-    <h1>SAXO VERTRIEB</h1>
+    <h1>SAXO VERTRIEB UG</h1>
+    <p>Wo Qualität auf Erfahrung trifft</p>
     <nav>
       <a onclick="switchSection('home')">🏠</a>
       <a onclick="switchSection('about')">ℹ️</a>
@@ -149,158 +155,3 @@
     </div>
   </header>
   <main>
-<!-- تب خانه -->
-<section data-section="home" data-lang="de">
-  <h2>Startseite</h2>
-  <p><strong>Wo Qualität auf Erfahrung trifft</strong></p>
-  <p>Wir beraten, verkaufen und installieren hochwertige Solaranlagen – für Privatkunden und Großprojekte. Schnelle Umsetzung, faire Preise und 25 Jahre Garantie.</p>
-  <video autoplay muted playsinline loop>
-    <source src="videos/video5859405311047112939.mp4" type="video/mp4">
-    Ihr Browser unterstützt kein Video.
-  </video>
-</section>
-<section data-section="home" data-lang="en" class="hidden">
-  <h2>Home</h2>
-  <p><strong>Where quality meets experience</strong></p>
-  <p>We provide consulting, sales and installation of premium solar systems – for homes and solar farms. Fast service, best price and 25-year warranty.</p>
-  <video autoplay muted playsinline loop>
-    <source src="videos/video5859405311047112939.mp4" type="video/mp4">
-    Your browser does not support video.
-  </video>
-</section>
-<section data-section="home" data-lang="fa" class="hidden">
-  <h2>خانه</h2>
-  <p><strong>جایی که کیفیت با تجربه تلاقی می‌کند</strong></p>
-  <p>ما خدمات مشاوره، فروش، نصب و پشتیبانی پنل‌های خورشیدی را با کیفیت عالی، قیمت مناسب و ضمانت ۲۵ ساله ارائه می‌دهیم – از خانه‌های مسکونی تا مزارع خورشیدی.</p>
-  <video autoplay muted playsinline loop>
-    <source src="videos/video5859405311047112939.mp4" type="video/mp4">
-    مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
-  </video>
-</section>
-
-<!-- تب درباره ما -->
-<section data-section="about" data-lang="de" class="hidden">
-  <h2>Über uns</h2>
-  <p>SAXO VERTRIEB ist Ihr erfahrener Partner für Solartechnik – mit Beratung, Verkauf und Komplettservice aus einer Hand.</p>
-</section>
-<section data-section="about" data-lang="en" class="hidden">
-  <h2>About Us</h2>
-  <p>SAXO VERTRIEB is your expert partner in solar energy – offering consulting, sales and complete service in one place.</p>
-</section>
-<section data-section="about" data-lang="fa" class="hidden">
-  <h2>درباره ما</h2>
-  <p>شرکت SAXO VERTRIEB شریک قابل اعتماد شما در حوزه انرژی خورشیدی است – با مشاوره، فروش و خدمات کامل در یک مجموعه.</p>
-</section>
-
-<!-- تب پروژه‌ها با اسلایدر -->
-<section data-section="projects" data-lang="de" class="hidden">
-  <h2>Projekte</h2>
-  <div class="gallery-slider">
-    <div class="slides">
-      <img src="images/5859405311503354039.jpg" alt="Projekt 1">
-      <img src="images/5859405311503354040.jpg" alt="Projekt 2">
-      <img src="images/5859405311503354041.jpg" alt="Projekt 3">
-      <img src="images/5859405311503354042.jpg" alt="Projekt 4">
-      <img src="images/5859405311503354043.jpg" alt="Projekt 5">
-    </div>
-  </div>
-  <div class="slider-buttons">
-    <button onclick="showSlide(currentSlide - 1)">⟵</button>
-    <button onclick="showSlide(currentSlide + 1)">⟶</button>
-  </div>
-</section>
-<section data-section="projects" data-lang="en" class="hidden">
-  <h2>Projects</h2>
-  <div class="gallery-slider">
-    <div class="slides">
-      <img src="images/5859405311503354039.jpg" alt="Project 1">
-      <img src="images/5859405311503354040.jpg" alt="Project 2">
-      <img src="images/5859405311503354041.jpg" alt="Project 3">
-      <img src="images/5859405311503354042.jpg" alt="Project 4">
-      <img src="images/5859405311503354043.jpg" alt="Project 5">
-    </div>
-  </div>
-  <div class="slider-buttons">
-    <button onclick="showSlide(currentSlide - 1)">⟵</button>
-    <button onclick="showSlide(currentSlide + 1)">⟶</button>
-  </div>
-</section>
-<section data-section="projects" data-lang="fa" class="hidden">
-  <h2>پروژه‌ها</h2>
-  <div class="gallery-slider">
-    <div class="slides">
-      <img src="images/5859405311503354039.jpg" alt="پروژه ۱">
-      <img src="images/5859405311503354040.jpg" alt="پروژه ۲">
-      <img src="images/5859405311503354041.jpg" alt="پروژه ۳">
-      <img src="images/5859405311503354042.jpg" alt="پروژه ۴">
-      <img src="images/5859405311503354043.jpg" alt="پروژه ۵">
-    </div>
-  </div>
-  <div class="slider-buttons">
-    <button onclick="showSlide(currentSlide - 1)">⟵</button>
-    <button onclick="showSlide(currentSlide + 1)">⟶</button>
-  </div>
-</section>
-<!-- تب تماس با ما -->
-<section data-section="contact" data-lang="de" class="hidden">
-  <h2>Kontakt</h2>
-  <p><strong>Adresse:</strong> Bergstraße 49, 01744 Dippoldiswalde</p>
-  <p><strong>Telefon:</strong> 017684362604</p>
-  <p><strong>Projektanfragen:</strong> info@saxo-vertrieb.de – Für neue Kundenprojekte</p>
-  <p><strong>Partner & Bearbeitung:</strong> partner@saxo-vertrieb.de – Für laufende Projekte und Kooperationen</p>
-  <p><strong>Backoffice & Sonstiges:</strong> backoffice@saxo-vertrieb.de – Für allgemeine Anfragen</p>
-  <div class="map-container">
-    <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed"></iframe>
-  </div>
-</section>
-
-<section data-section="contact" data-lang="en" class="hidden">
-  <h2>Contact</h2>
-  <p><strong>Address:</strong> Bergstraße 49, 01744 Dippoldiswalde</p>
-  <p><strong>Phone:</strong> 017684362604</p>
-  <p><strong>Project Inquiries:</strong> info@saxo-vertrieb.de – For new project requests</p>
-  <p><strong>Partners & Processing:</strong> partner@saxo-vertrieb.de – For cooperation & running projects</p>
-  <p><strong>Backoffice & General:</strong> backoffice@saxo-vertrieb.de – For other inquiries</p>
-  <div class="map-container">
-    <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed"></iframe>
-  </div>
-</section>
-
-<section data-section="contact" data-lang="fa" class="hidden">
-  <h2>تماس با ما</h2>
-  <p><strong>آدرس:</strong> برگ‌اشتراسه ۴۹، ۰۱۷۴۴ دیپولدیسوالده</p>
-  <p><strong>تلفن:</strong> ۰۱۷۶۸۴۳۶۲۶۰۴</p>
-  <p><strong>درخواست پروژه:</strong> info@saxo-vertrieb.de – برای درخواست‌های پروژه جدید</p>
-  <p><strong>همکاری و پیگیری پروژه:</strong> partner@saxo-vertrieb.de – برای شرکای پروژه و پروژه‌های جاری</p>
-  <p><strong>سایر امور و پشتیبانی:</strong> backoffice@saxo-vertrieb.de – برای سوالات عمومی</p>
-  <div class="map-container">
-    <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed"></iframe>
-  </div>
-</section>
-<!-- تب مشاوره سریع -->
-<section data-section="booking" data-lang="de" class="hidden">
-  <h2>Schnelle Beratung</h2>
-  <p>Reservieren Sie Ihren Wunschtermin für eine kostenlose Beratung:</p>
-  <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
-</section>
-
-<section data-section="booking" data-lang="en" class="hidden">
-  <h2>Quick Consultation</h2>
-  <p>Book your preferred time for a free consultation:</p>
-  <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
-</section>
-
-<section data-section="booking" data-lang="fa" class="hidden">
-  <h2>مشاوره سریع</h2>
-  <p>برای رزرو مشاوره رایگان، زمان دلخواه خود را انتخاب کنید:</p>
-  <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
-</section>
-
-</main>
-
-<!-- فوتر نهایی -->
-<footer>
-  <p>© 2025 SAXO SALES. All rights reserved.</p>
-</footer>
-</body>
-</html>
