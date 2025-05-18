@@ -114,7 +114,7 @@
         el.classList.remove('active');
         el.classList.add('hidden');
       });
-      document.querySelectorAll('[data-section="' + section + '"][data-lang="' + lang + '"]').forEach(el => {
+      document.querySelectorAll('[data-section=\"' + section + '\"][data-lang=\"' + lang + '\"]').forEach(el => {
         el.classList.add('active');
         el.classList.remove('hidden');
       });
@@ -155,24 +155,22 @@
     </div>
   </header>
   <main>
-
 <!-- خانه -->
-<section data-section="home" data-lang="de">
-  <p><strong>Wo Qualität auf Erfahrung trifft</strong></p>
+<section data-section="home" data-lang="de" class="active">
   <p>Wir beraten, verkaufen und installieren hochwertige Solaranlagen – für Privatkunden und Großprojekte. Schnelle Umsetzung, faire Preise und 25 Jahre Garantie.</p>
   <video autoplay muted playsinline loop>
     <source src="videos/video5859405311047112939.mp4" type="video/mp4">
   </video>
 </section>
+
 <section data-section="home" data-lang="en" class="hidden">
-  <p><strong>Where quality meets experience</strong></p>
   <p>We provide consulting, sales and installation of premium solar systems – for homes and solar farms. Fast service, best price and 25-year warranty.</p>
   <video autoplay muted playsinline loop>
     <source src="videos/video5859405311047112939.mp4" type="video/mp4">
   </video>
 </section>
+
 <section data-section="home" data-lang="fa" class="hidden">
-  <p><strong>جایی که کیفیت با تجربه تلاقی می‌کند</strong></p>
   <p>ما خدمات مشاوره، فروش، نصب و پشتیبانی پنل‌های خورشیدی را با کیفیت عالی، قیمت مناسب و ضمانت ۲۵ ساله ارائه می‌دهیم – از خانه‌های مسکونی تا مزارع خورشیدی.</p>
   <video autoplay muted playsinline loop>
     <source src="videos/video5859405311047112939.mp4" type="video/mp4">
@@ -184,16 +182,89 @@
   <h2>Über uns</h2>
   <p>SAXO VERTRIEB UG ist ein modernes Unternehmen mit Fokus auf Nachhaltigkeit und Kundenzufriedenheit. Unsere Mission ist es, grüne Energie für alle zugänglich zu machen – mit hochwertigen Solarlösungen, zuverlässigem Service und ehrlicher Beratung.</p>
 </section>
+
 <section data-section="about" data-lang="en" class="hidden">
   <h2>About Us</h2>
   <p>SAXO VERTRIEB UG is a modern company focused on sustainability and customer satisfaction. Our mission is to make solar energy accessible to everyone – through quality products, reliable service, and honest guidance.</p>
 </section>
+
 <section data-section="about" data-lang="fa" class="hidden">
   <h2>درباره ما</h2>
   <p>شرکت SAXO VERTRIEB UG شرکتی نوآور و پیشرو در زمینه انرژی‌های تجدیدپذیر است. مأموریت ما فراهم کردن دسترسی آسان و مطمئن به انرژی خورشیدی برای همه افراد، با استفاده از تجهیزات باکیفیت، خدمات حرفه‌ای و مشاوره صادقانه است.</p>
 </section>
 
-<!-- فوتر -->
+<!-- پروژه‌ها -->
+<section data-section="projects" data-lang="de" class="hidden">
+  <h2>Projekte</h2>
+  <div class="gallery-slider">
+    <div class="slides">
+      <img src="images/5859405311503354039.jpg" alt="Projekt 1">
+      <img src="images/5859405311503354040.jpg" alt="Projekt 2">
+      <img src="images/5859405311503354041.jpg" alt="Projekt 3">
+      <img src="images/5859405311503354042.jpg" alt="Projekt 4">
+    </div>
+  </div>
+  <div class="slider-buttons">
+    <button onclick="showSlide(currentSlide - 1)">⟵</button>
+    <button onclick="showSlide(currentSlide + 1)">⟶</button>
+  </div>
+</section>
+<!-- تماس با ما -->
+<section data-section="contact" data-lang="de" class="hidden">
+  <h2>Kontakt</h2>
+  <p><strong>Adresse:</strong> Bergstraße 49, 01744 Dippoldiswalde</p>
+  <p><strong>Telefon:</strong> 017684362604</p>
+  <p><strong>Projektanfragen:</strong> info@saxo-vertrieb.de</p>
+  <p><strong>Partner & Bearbeitung:</strong> partner@saxo-vertrieb.de</p>
+  <p><strong>Backoffice & Sonstiges:</strong> backoffice@saxo-vertrieb.de</p>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed"></iframe>
+  </div>
+</section>
+
+<section data-section="contact" data-lang="en" class="hidden">
+  <h2>Contact</h2>
+  <p><strong>Address:</strong> Bergstraße 49, 01744 Dippoldiswalde</p>
+  <p><strong>Phone:</strong> 017684362604</p>
+  <p><strong>Project Inquiries:</strong> info@saxo-vertrieb.de</p>
+  <p><strong>Partners & Projects:</strong> partner@saxo-vertrieb.de</p>
+  <p><strong>Backoffice & Other:</strong> backoffice@saxo-vertrieb.de</p>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed"></iframe>
+  </div>
+</section>
+
+<section data-section="contact" data-lang="fa" class="hidden">
+  <h2>تماس با ما</h2>
+  <p><strong>آدرس:</strong> برگ‌اشتراسه ۴۹، ۰۱۷۴۴ دیپولدیسوالده</p>
+  <p><strong>تلفن:</strong> ۰۱۷۶۸۴۳۶۲۶۰۴</p>
+  <p><strong>درخواست پروژه:</strong> info@saxo-vertrieb.de</p>
+  <p><strong>همکاری و اجرای پروژه:</strong> partner@saxo-vertrieb.de</p>
+  <p><strong>سایر امور و پشتیبانی:</strong> backoffice@saxo-vertrieb.de</p>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed"></iframe>
+  </div>
+</section>
+
+<!-- مشاوره سریع -->
+<section data-section="booking" data-lang="de" class="hidden">
+  <h2>Schnelle Beratung</h2>
+  <p>Reservieren Sie Ihren Wunschtermin:</p>
+  <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
+</section>
+
+<section data-section="booking" data-lang="en" class="hidden">
+  <h2>Quick Consultation</h2>
+  <p>Book your preferred consultation time:</p>
+  <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
+</section>
+
+<section data-section="booking" data-lang="fa" class="hidden">
+  <h2>مشاوره سریع</h2>
+  <p>نوبت مشاوره خود را انتخاب کنید:</p>
+  <div class="calendly-inline-widget" data-url="https://calendly.com/hossein-mir2020/30min?hide_gdpr_banner=1"></div>
+</section>
+
 </main>
 <footer>
   <p>© 2025 SAXO SALES. All rights reserved.</p>
