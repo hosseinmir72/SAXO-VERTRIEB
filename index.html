@@ -3,42 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SAXO VERTRIEB UG – Startseite</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <title>SAXO VERTRIEB UG</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      direction: ltr;
+    }
+    header {
+      background-color: #083c35;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    header img {
+      height: 80px;
+      margin-bottom: 0.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0e5248;
+      padding: 0.5rem;
+      gap: 2rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    main {
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #083c35;
+    }
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .gallery-container img {
+      width: 220px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery-container img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <img src="images/Profile3.jpg" alt="SAXO Logo" class="logo-large" />
-    <h1>SAXO VERTRIEB UG</h1>
-    <p class="slogan">Wo Qualität auf Erfahrung trifft</p>
-    <nav>
-      <a href="index.html">Startseite</a>
-      <a href="about.html">Über uns</a>
-      <a href="projects.html">Projekte</a>
-      <a href="contact.html">Kontakt</a>
-      <a href="booking.html">Schnelle Beratung</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero" data-aos="fade-up">
-      <h2>Willkommen</h2>
-      <p>Willkommen bei SAXO VERTRIEB UG. Wir beraten, verkaufen und installieren hochwertige Solaranlagen mit 25 Jahren Garantie – schnell, zuverlässig und preiswert.</p>
-    </section>
+<header>
+  <img src="images/Profile3.jpg" alt="SAXO Logo">
+  <h1>SAXO VERTRIEB UG</h1>
+  <p><em>Wo Qualität auf Erfahrung trifft</em></p>
+</header>
 
-    <section data-aos="zoom-in">
-      <video autoplay muted loop playsinline class="video">
-        <source src="videos/video5859405311047112939.mp4" type="video/mp4" />
-      </video>
-    </section>
-  </main>
+<nav>
+  <a href="#home">Startseite</a>
+  <a href="#about">Über uns</a>
+  <a href="#projects">Projekte</a>
+  <a href="#contact">Kontakt</a>
+</nav>
 
-  <footer>
-    <p>© 2025 SAXO SALES. All rights reserved.</p>
-  </footer>
+<main>
+<section id="home">
+  <h2>Startseite</h2>
+  <p>Willkommen bei SAXO VERTRIEB UG. Wir beraten, verkaufen und installieren hochwertige Solaranlagen mit 25 Jahren Garantie – schnell, zuverlässig und preiswert.</p>
+  <video autoplay muted loop playsinline style="width: 100%; max-width: 800px; border-radius: 10px; margin-top: 1rem;">
+    <source src="videos/video5859405311047112939.mp4" type="video/mp4">
+  </video>
+</section>
+<section id="about">
+  <h2>Über uns</h2>
+  <p>SAXO VERTRIEB UG ist ein modernes Unternehmen mit Fokus auf Nachhaltigkeit und Kundenzufriedenheit. Unsere Mission ist es, grüne Energie für alle zugänglich zu machen – mit hochwertigen Solarlösungen, zuverlässigem Service und ehrlicher Beratung.</p>
+</section>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init();</script>
+<section id="projects">
+  <h2>Projekte</h2>
+  <div class="gallery-container">
+    <img src="images/5859405311503354039.jpg" onclick="openModal(0)" />
+    <img src="images/5859405311503354040.jpg" onclick="openModal(1)" />
+    <img src="images/5859405311503354041.jpg" onclick="openModal(2)" />
+    <img src="images/5859405311503354042.jpg" onclick="openModal(3)" />
+    <img src="images/5859405311503354043.jpg" onclick="openModal(4)" />
+    <img src="images/5859405311503354044.jpg" onclick="openModal(5)" />
+    <img src="images/5859405311503354045.jpg" onclick="openModal(6)" />
+    <img src="images/5859405311503354046.jpg" onclick="openModal(7)" />
+    <img src="images/5859405311503354047.jpg" onclick="openModal(8)" />
+    <img src="images/5859405311503354048.jpg" onclick="openModal(9)" />
+    <img src="images/5859405311503354049.jpg" onclick="openModal(10)" />
+    <img src="images/5859405311503354050.jpg" onclick="openModal(11)" />
+    <img src="images/5859405311503354051.jpg" onclick="openModal(12)" />
+    <img src="images/5859405311503354052.jpg" onclick="openModal(13)" />
+    <img src="images/5859405311503354053.jpg" onclick="openModal(14)" />
+  </div>
+</section>
+
+<div class="modal" id="modal">
+  <span class="nav left" onclick="prevImage()">&#10094;</span>
+  <img id="modal-img" src="">
+  <span class="nav right" onclick="nextImage()">&#10095;</span>
+</div>
+<section id="contact">
+  <h2>Kontakt</h2>
+  <p><strong>Adresse:</strong> Bergstraße 49, 01744 Dippoldiswalde</p>
+  <p><strong>Telefon:</strong> 017684362604</p>
+  <p><strong>Projektanfragen:</strong> info@saxo-vertrieb.de</p>
+  <p><strong>Backoffice & Sonstiges:</strong> backoffice@saxo-vertrieb.de</p>
+  <p><strong>Partner & Bearbeitung:</strong> partner@saxo-vertrieb.de</p>
+  <iframe src="https://www.google.com/maps?q=Bergstraße+49,+01744+Dippoldiswalde&output=embed" width="100%" height="300" style="border:0; margin-top:1rem; border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+</main>
+
+<footer>
+  <p>© 2025 SAXO SALES. All rights reserved.</p>
+</footer>
+
+<script>
+  const images = [
+    "images/5859405311503354039.jpg",
+    "images/5859405311503354040.jpg",
+    "images/5859405311503354041.jpg",
+    "images/5859405311503354042.jpg",
+    "images/5859405311503354043.jpg",
+    "images/5859405311503354044.jpg",
+    "images/5859405311503354045.jpg",
+    "images/5859405311503354046.jpg",
+    "images/5859405311503354047.jpg",
+    "images/5859405311503354048.jpg",
+    "images/5859405311503354049.jpg",
+    "images/5859405311503354050.jpg",
+    "images/5859405311503354051.jpg",
+    "images/5859405311503354052.jpg",
+    "images/5859405311503354053.jpg"
+  ];
+  let currentIndex = 0;
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+
+  function openModal(index) {
+    currentIndex = index;
+    modal.style.display = 'flex';
+    modalImg.src = images[currentIndex];
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    modalImg.src = images[currentIndex];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    modalImg.src = images[currentIndex];
+  }
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+</script>
+
 </body>
 </html>
