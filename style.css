@@ -5,6 +5,14 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
 }
 
 header {
@@ -27,10 +35,6 @@ nav a {
   font-weight: bold;
 }
 
-main {
-  padding: 2rem;
-}
-
 h2 {
   color: #083c35;
   margin-top: 0;
@@ -47,10 +51,9 @@ footer {
   background-color: #083c35;
   color: white;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 5rem 1rem;
   background-image: url('images/Profile3.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  opacity: 0.95;
 }
