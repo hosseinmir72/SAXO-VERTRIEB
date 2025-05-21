@@ -6,11 +6,57 @@
   <title>SAXO VERTRIEB UG – Projekte</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .gallery-img {
+      width: 220px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    .modal .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3rem;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+    }
+    .modal .left { left: 20px; }
+    .modal .right { right: 20px; }
+  </style>
 </head>
 <body>
   <header>
     <h1>SAXO VERTRIEB UG</h1>
-    <p class="slogan">Wo Qualität auf Erfahrung trifft</p>
+    <p>Wo Qualität auf Erfahrung trifft</p>
     <nav>
       <a href="index.html">Startseite</a>
       <a href="about.html">Über uns</a>
@@ -21,10 +67,29 @@
   </header>
 
   <main>
-    <section data-aos="fade-up">
-      <h2>Projekte</h2>
-      <p>Inhalt für Projekte kommt hier...</p>
-    </section>
+    <h2>Unsere Projekte</h2>
+    <div class="gallery-container" data-aos="fade-up">
+      <img src="images/5859405311503354039.jpg" onclick="openModal(0)" class="gallery-img">
+<img src="images/5859405311503354040.jpg" onclick="openModal(1)" class="gallery-img">
+<img src="images/5859405311503354041.jpg" onclick="openModal(2)" class="gallery-img">
+<img src="images/5859405311503354042.jpg" onclick="openModal(3)" class="gallery-img">
+<img src="images/5859405311503354043.jpg" onclick="openModal(4)" class="gallery-img">
+<img src="images/5859405311503354044.jpg" onclick="openModal(5)" class="gallery-img">
+<img src="images/5859405311503354045.jpg" onclick="openModal(6)" class="gallery-img">
+<img src="images/5859405311503354046.jpg" onclick="openModal(7)" class="gallery-img">
+<img src="images/5859405311503354047.jpg" onclick="openModal(8)" class="gallery-img">
+<img src="images/5859405311503354048.jpg" onclick="openModal(9)" class="gallery-img">
+<img src="images/5859405311503354049.jpg" onclick="openModal(10)" class="gallery-img">
+<img src="images/5859405311503354050.jpg" onclick="openModal(11)" class="gallery-img">
+<img src="images/5859405311503354051.jpg" onclick="openModal(12)" class="gallery-img">
+<img src="images/5859405311503354052.jpg" onclick="openModal(13)" class="gallery-img">
+<img src="images/5859405311503354053.jpg" onclick="openModal(14)" class="gallery-img">
+    </div>
+    <div class="modal" id="modal">
+      <span class="nav left" onclick="prevImage()">&#10094;</span>
+      <img id="modal-img" src="">
+      <span class="nav right" onclick="nextImage()">&#10095;</span>
+    </div>
   </main>
 
   <footer>
@@ -32,6 +97,36 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+    const images = ["images/5859405311503354039.jpg","images/5859405311503354040.jpg","images/5859405311503354041.jpg","images/5859405311503354042.jpg","images/5859405311503354043.jpg","images/5859405311503354044.jpg","images/5859405311503354045.jpg","images/5859405311503354046.jpg","images/5859405311503354047.jpg","images/5859405311503354048.jpg","images/5859405311503354049.jpg","images/5859405311503354050.jpg","images/5859405311503354051.jpg","images/5859405311503354052.jpg","images/5859405311503354053.jpg"];
+    let currentIndex = 0;
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+
+    function openModal(index) {
+      currentIndex = index;
+      modal.style.display = 'flex';
+      modalImg.src = images[currentIndex];
+    }
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      modalImg.src = images[currentIndex];
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      modalImg.src = images[currentIndex];
+    }
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal();
+    });
+  </script>
 </body>
 </html>
