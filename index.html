@@ -80,6 +80,68 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+  
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: black;
+}
+
   </style>
 </head>
 <body>
@@ -96,23 +158,25 @@
   </header>
 
   <main>
-    <section class="scene" data-aos="fade-up">
-      <div class="solar"></div>
-      <div class="windmill">
-        <div class="blade"><span></span></div>
-      </div>
-    </section>
+    <section class="hero-section">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="videos/video5859405311047112939.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay"></div>
+  <div class="hero-content" data-aos="fade-up">
+    <h1>SAXO VERTRIEB UG</h1>
+    <p>Nachhaltige Energielösungen mit Erfahrung & Qualität</p>
+    <a href="booking.html" class="cta-button">Kostenlose Beratung</a>
+  </div>
+</section>
 
     <section class="hero" data-aos="fade-up">
       <h2>Willkommen</h2>
       <p>Willkommen bei SAXO VERTRIEB UG. Wir beraten, verkaufen und installieren hochwertige Solaranlagen mit 25 Jahren Garantie – schnell, zuverlässig und preiswert.</p>
     </section>
 
-    <section data-aos="zoom-in">
-      <video autoplay muted loop playsinline class="video">
-        <source src="videos/video5859405311047112939.mp4" type="video/mp4" />
-      </video>
-    </section>
+    
   </main>
 
   <footer>
