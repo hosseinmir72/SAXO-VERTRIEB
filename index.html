@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -6,6 +7,80 @@
   <title>SAXO VERTRIEB UG – Startseite</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    .scene {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+
+    .solar {
+      position: absolute;
+      bottom: 10%;
+      left: 10%;
+      width: 150px;
+      height: 100px;
+      background: linear-gradient(45deg, #444, #222);
+      transform: skewY(-20deg);
+      border: 4px solid #0f0;
+      box-shadow: 0 0 20px rgba(0,255,0,0.5);
+    }
+
+    .windmill {
+      position: absolute;
+      bottom: 20%;
+      left: 60%;
+      width: 10px;
+      height: 120px;
+      background: #999;
+    }
+
+    .blade {
+      position: absolute;
+      top: -60px;
+      left: -40px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      animation: spin 3s linear infinite;
+    }
+
+    .blade::before,
+    .blade::after {
+      content: "";
+      position: absolute;
+      top: 45px;
+      left: 45px;
+      width: 60px;
+      height: 10px;
+      background: #333;
+      transform-origin: left center;
+    }
+
+    .blade::before {
+      transform: rotate(0deg);
+    }
+
+    .blade::after {
+      transform: rotate(120deg);
+    }
+
+    .blade span {
+      position: absolute;
+      top: 45px;
+      left: 45px;
+      width: 60px;
+      height: 10px;
+      background: #333;
+      transform: rotate(240deg);
+      transform-origin: left center;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,6 +96,13 @@
   </header>
 
   <main>
+    <section class="scene" data-aos="fade-up">
+      <div class="solar"></div>
+      <div class="windmill">
+        <div class="blade"><span></span></div>
+      </div>
+    </section>
+
     <section class="hero" data-aos="fade-up">
       <h2>Willkommen</h2>
       <p>Willkommen bei SAXO VERTRIEB UG. Wir beraten, verkaufen und installieren hochwertige Solaranlagen mit 25 Jahren Garantie – schnell, zuverlässig und preiswert.</p>
