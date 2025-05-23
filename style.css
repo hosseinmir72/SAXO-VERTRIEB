@@ -49,15 +49,12 @@ h2 {
 footer {
   background-color: #083c35;
   color: white;
-  padding: 3rem 1rem 6rem; /* فاصله پایین بیشتر برای جلوگیری از افتادن روی لوگو */
+  padding: 3rem 1rem 6rem;
   background-image: url('images/Profile3.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   text-align: right;
   min-height: 300px;
   box-sizing: border-box;
@@ -67,8 +64,10 @@ footer p {
   margin: 0;
   padding: 1rem;
   font-size: 0.9rem;
-  z-index: 1;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   max-width: 90%;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
 }
