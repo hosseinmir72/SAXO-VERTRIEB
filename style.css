@@ -1,23 +1,28 @@
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background: url('images/bg-solarfarm-upscaled.jpg') no-repeat center center fixed;
-  background-size: cover;
-  background-attachment: fixed;
-  color: #333;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+:root {
+  --primary-color: #083c35;
+  --accent-color: #0f5d4d;
+  --text-color: #333;
+  --light-bg: rgba(255, 255, 255, 0.95);
 }
 
-main {
-  flex: 1;
-  padding: 2rem;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: var(--text-color);
+  background: url('images/bg-solarfarm.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-  background-color: #083c35;
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 1rem;
@@ -36,40 +41,164 @@ nav a {
   font-weight: bold;
 }
 
-h2 {
-  color: #083c35;
-  margin-top: 0;
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.video {
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 800px;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: opacity 1s ease-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: var(--accent-color);
+}
+
+.intro-message,
+.about,
+.why-us,
+.installation-steps,
+.reviews {
+  background: var(--light-bg);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.text, .image {
+  flex: 1;
+  min-width: 280px;
+}
+
+.image img {
+  width: 100%;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.why-us ul {
+  list-style: none;
+  margin-top: 1rem;
+  padding-left: 0;
+  line-height: 2;
+  font-size: 1.1rem;
+}
+
+.installation-steps ol {
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.cta-block {
   margin-top: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review-card {
+  background: white;
+  border-left: 5px solid var(--primary-color);
+  padding: 1rem 1.5rem;
+  margin: 1rem auto;
+  border-radius: 5px;
+  max-width: 600px;
+  text-align: left;
 }
 
 footer {
-  background-color: #083c35;
+  background-color: var(--primary-color);
   color: white;
-  padding: 3rem 1rem 6rem;
+  text-align: right;
+  padding: 4rem 2rem;
   background-image: url('images/Profile3.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   position: relative;
-  text-align: right;
-  min-height: 300px;
-  box-sizing: border-box;
 }
 
 footer p {
   margin: 0;
-  padding: 1rem;
-  font-size: 0.9rem;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  max-width: 90%;
   position: absolute;
-  right: 2rem;
   bottom: 2rem;
+  right: 2rem;
+  background-color: rgba(0,0,0,0.4);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  .cta-button {
+    padding: 0.75rem 1.5rem;
+  }
 }
