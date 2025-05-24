@@ -6,141 +6,6 @@
   <title>SAXO VERTRIEB UG – Startseite</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-  <style>
-    .scene {
-      position: relative;
-      width: 100%;
-      height: 300px;
-    }
-
-    .solar {
-      position: absolute;
-      bottom: 10%;
-      left: 10%;
-      width: 150px;
-      height: 100px;
-      background: linear-gradient(45deg, #444, #222);
-      transform: skewY(-20deg);
-      border: 4px solid #0f0;
-      box-shadow: 0 0 20px rgba(0,255,0,0.5);
-    }
-
-    .windmill {
-      position: absolute;
-      bottom: 20%;
-      left: 60%;
-      width: 10px;
-      height: 120px;
-      background: #999;
-    }
-
-    .blade {
-      position: absolute;
-      top: -60px;
-      left: -40px;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      animation: spin 3s linear infinite;
-    }
-
-    .blade::before,
-    .blade::after {
-      content: "";
-      position: absolute;
-      top: 45px;
-      left: 45px;
-      width: 60px;
-      height: 10px;
-      background: #333;
-      transform-origin: left center;
-    }
-
-    .blade::before {
-      transform: rotate(0deg);
-    }
-
-    .blade::after {
-      transform: rotate(120deg);
-    }
-
-    .blade span {
-      position: absolute;
-      top: 45px;
-      left: 45px;
-      width: 60px;
-      height: 10px;
-      background: #333;
-      transform: rotate(240deg);
-      transform-origin: left center;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-.hero-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: white;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0 2rem;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.cta-button {
-  padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 2px solid white;
-  border-radius: 50px;
-  transition: 0.3s;
-  text-decoration: none;
-}
-
-.cta-button:hover {
-  background-color: white;
-  color: black;
-}
-  </style>
 </head>
 <body>
   <header>
@@ -155,45 +20,105 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero-section">
-      <video autoplay muted loop playsinline class="bg-video">
-        <source src="videos/video5859405311047112939.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="overlay"></div>
-      <div class="hero-content" data-aos="fade-up">
-        <h1>SAXO VERTRIEB UG</h1>
-        <p>Nachhaltige Energielösungen mit Erfahrung & Qualität</p>
-        <a href="booking.html" class="cta-button">Kostenlose Beratung</a>
+  <section class="hero-section">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="videos/video5859405311047112939.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content" data-aos="fade-up">
+      <h1>SAXO VERTRIEB UG</h1>
+      <p>Nachhaltige Energielösungen mit Erfahrung & Qualität</p>
+      <a href="booking.html" class="cta-button">Kostenlose Beratung</a>
+    </div>
+  </section>
+
+  <section class="intro-message" data-aos="fade-up">
+    <h2>Starten Sie mit uns in die Zukunft.</h2>
+    <p>Produzieren Sie Ihren eigenen Strom – sauber, sicher und unabhängig.</p>
+  </section>
+
+  <section class="solar-benefits" data-aos="fade-up">
+    <div class="container">
+      <div class="text">
+        <h2>Warum Solarenergie?</h2>
+        <p><strong>Unabhängigkeit, Nachhaltigkeit und Zukunftssicherheit.</strong></p>
+        <p>Die Sonne liefert täglich ein Vielfaches des weltweiten Energiebedarfs – kostenlos, sauber und unerschöpflich.
+        Mit einer Solaranlage auf Ihrem Dach investieren Sie nicht nur in Ihre eigene Stromversorgung, sondern auch in den Schutz unserer Umwelt.
+        Solarenergie reduziert Ihre Stromkosten langfristig, steigert den Wert Ihrer Immobilie und macht Sie unabhängiger von steigenden Energiepreisen.</p>
       </div>
-    </section>
+      <div class="image">
+        <img src="images/solar-benefit.jpg" alt="Solaranlage auf einem Dach" />
+      </div>
+    </div>
+  </section>
 
-    <section class="hero" data-aos="fade-up">
-      <h2>Willkommen</h2>
-      <p>Willkommen bei SAXO VERTRIEB UG. Wir beraten, verkaufen und installieren hochwertige Solaranlagen mit 25 Jahren Garantie – schnell, zuverlässig und preiswert.</p>
-    </section>
+  <section class="about" data-aos="fade-up">
+    <h2>Über uns</h2>
+    <p>SAXO VERTRIEB UG ist ein modernes Unternehmen mit Sitz in Dresden, das sich auf die Planung, den Vertrieb und die Installation von Solaranlagen spezialisiert hat.
+    Unser Ziel ist es, nachhaltige Energie für alle zugänglich zu machen – schnell, zuverlässig und individuell abgestimmt.</p>
+    <p>Wir bedienen sowohl Privatkunden als auch gewerbliche Projekte. Unsere Philosophie: Persönliche Beratung, hochwertige Produkte und eine reibungslose Umsetzung – alles aus einer Hand.</p>
+    <p>Ob Einfamilienhaus, Mehrfamilienobjekt oder Großprojekt – wir begleiten Sie von der ersten Idee bis zur fertigen Solarlösung.
+    Erleben Sie, wie einfach und effizient der Umstieg auf Solarenergie sein kann – mit einem erfahrenen Partner, der Ihnen zuhört, klar kommuniziert und Ihre Energielösung professionell umsetzt.</p>
+  </section>
 
-    <section data-aos="fade-up">
-      <h2>Unsere Dienstleistungen</h2>
-      <p>Wir bieten innovative Lösungen in den Bereichen Solartechnik, Windenergie und nachhaltige Beratung.</p>
-    </section>
+  <section class="why-us" data-aos="fade-up">
+    <h2>Warum wir?</h2>
+    <ul>
+      <li>✔ Jahrzehntelange Erfahrung in der Solartechnik</li>
+      <li>✔ Persönliche Beratung & individuelle Planung</li>
+      <li>✔ Hochwertige Komponenten mit bis zu 25 Jahren Garantie</li>
+      <li>✔ Schnelle, saubere und zuverlässige Installation</li>
+      <li>✔ Transparente Kommunikation & faire Preise</li>
+    </ul>
+    <p>Mit SAXO VERTRIEB UG wählen Sie einen Partner, der Qualität, Zuverlässigkeit und Kundennähe vereint.</p>
+  </section>
 
-    <section data-aos="fade-up">
-      <h2>Warum SAXO VERTRIEB UG?</h2>
-      <ul>
-        <li>Jahre der Erfahrung in erneuerbaren Energien</li>
-        <li>Professionelle und maßgeschneiderte Beratung</li>
-        <li>Komplette Projektbegleitung von der Planung bis zur Umsetzung</li>
-      </ul>
-    </section>
-  </main>
+  <section class="installation-steps" data-aos="fade-up">
+    <h2>So einfach geht’s – Ihre Solaranlage in 5 Schritten</h2>
+    <ol>
+      <li><strong>Unverbindliche Beratung:</strong> Wir klären Ihre Wünsche, prüfen Ihr Dach und beantworten alle Ihre Fragen – kostenlos und persönlich.</li>
+      <li><strong>Individuelle Planung:</strong> Unsere Experten erstellen ein maßgeschneidertes Konzept mit Wirtschaftlichkeitsberechnung.</li>
+      <li><strong>Angebot & Vertrag:</strong> Sie erhalten ein transparentes Angebot mit allen Details. Nach Ihrer Zustimmung starten wir sofort.</li>
+      <li><strong>Fachgerechte Installation:</strong> Unsere Monteure installieren Ihre Anlage schnell, sauber und sicher.</li>
+      <li><strong>Inbetriebnahme & Unterstützung:</strong> Wir nehmen die Anlage in Betrieb und stehen Ihnen auch danach jederzeit zur Seite.</li>
+    </ol>
+    <div class="cta-block">
+      <h3>Jetzt Ihre Beratung sichern – für eine saubere Stromzukunft</h3>
+      <p>Reservieren Sie jetzt Ihren Beratungstermin und machen Sie den ersten Schritt in Ihre unabhängige Energiezukunft.</p>
+      <a href="booking.html" class="cta-button">Jetzt Beratung vereinbaren</a>
+    </div>
+  </section>
+
+  <section class="reviews" data-aos="fade-up">
+    <h2>Kundenstimmen</h2>
+    <div class="review-card">
+      <p>„Sehr kompetente Beratung und saubere Ausführung. Absolut empfehlenswert!“</p>
+      <span>– Stefan K., Dresden</span>
+    </div>
+    <div class="review-card">
+      <p>„Alles wurde professionell abgewickelt – von der Planung bis zur Inbetriebnahme. Immer freundlich, immer erreichbar.“</p>
+      <span>– Maria S., Meißen</span>
+    </div>
+    <div class="review-card">
+      <p>„Transparente Kommunikation, faire Preise und super Ergebnis. Ich bin sehr zufrieden mit meiner Solaranlage.“</p>
+      <span>– Thomas R., Radebeul</span>
+    </div>
+    <div class="review-card">
+      <p>„Termintreu, effizient und sehr genau gearbeitet. Vielen Dank an das Team!“</p>
+      <span>– Uwe H., Pirna</span>
+    </div>
+  </section>
 
   <footer>
-    <p>© 2025 SAXO SALES. All rights reserved.</p>
+    <p>© 2025 SAXO SALES. Alle Rechte vorbehalten.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+    window.addEventListener('scroll', () => {
+      document.body.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
 </body>
 </html>
