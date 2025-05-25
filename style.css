@@ -113,12 +113,8 @@ section {
   background-color: var(--light-bg);
 }
 
-section:nth-of-type(even) {
-  margin-bottom: 6rem;
-}
-
-section:nth-of-type(odd) {
-  margin-bottom: 2.5rem;
+section:not(:last-of-type) {
+  margin-bottom: 4rem;
 }
 
 .grid-section {
@@ -153,14 +149,14 @@ ul {
 
 ol {
   font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 2;
   padding-left: 1.5rem;
   margin-top: 1.5rem;
 }
 
 .review-card {
   background: white;
-  margin: 1.5rem 3rem;
+  margin: 1.5rem 0;
   padding: 1.5rem;
   border-left: 5px solid var(--primary-color);
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
@@ -169,12 +165,27 @@ ol {
 }
 
 .cta-block {
-  background: var(--light-bg);
-  padding: 2rem;
-  margin-top: 2rem;
-  text-align: center;
+  background: #ffffff;
+  padding: 3rem 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.cta-block h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.cta-block p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.cta-block .cta-button {
+  display: inline-block;
 }
 
 footer {
@@ -215,11 +226,16 @@ footer p {
     flex-direction: column;
   }
 
-  .review-card {
-    margin: 1rem;
+  .grid-section .text,
+  .grid-section .image {
+    flex: 1 1 100%;
   }
 
   section {
     padding: 3rem 1.5rem;
+  }
+
+  .review-card {
+    margin: 1rem 0;
   }
 }
