@@ -106,7 +106,7 @@ nav a {
   background-color: #0a4a3e;
 }
 
-/* سکشن‌ها */
+/* سکشن‌های اصلی */
 section {
   width: 100%;
   padding: 5rem 3rem;
@@ -184,8 +184,30 @@ ol {
   margin-bottom: 2rem;
 }
 
-.cta-block .cta-button {
-  display: inline-block;
+/* سکشن وسط بین ویدیو و متن */
+.cta-banner {
+  background: transparent;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.cta-banner h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cta-banner p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* قبل از بخش نصب فاصله بیشتر */
+.installation-steps {
+  margin-top: 6rem;
 }
 
 footer {
@@ -237,5 +259,13 @@ footer p {
 
   .review-card {
     margin: 1rem 0;
+  }
+
+  .cta-banner h2 {
+    font-size: 2.2rem;
+  }
+
+  .cta-banner p {
+    font-size: 1.2rem;
   }
 }
