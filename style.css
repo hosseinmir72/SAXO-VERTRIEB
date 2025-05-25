@@ -2,7 +2,6 @@
   --primary-color: #083c35;
   --accent-color: #0f5d4d;
   --light-bg: #ffffff;
-  --soft-bg: #f4f7f9;
   --text-color: #222;
 }
 
@@ -20,6 +19,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
 main {
@@ -31,7 +32,6 @@ header {
   color: white;
   text-align: center;
   padding: 2rem 1rem;
-  width: 100%;
 }
 
 nav {
@@ -53,7 +53,6 @@ nav a {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  width: 100%;
 }
 
 .bg-video {
@@ -80,16 +79,15 @@ nav a {
   transform: translateY(-50%);
   color: white;
   padding: 2rem;
-  width: 100%;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 2rem;
 }
 
@@ -100,7 +98,7 @@ nav a {
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: background 0.3s;
 }
 
@@ -109,12 +107,18 @@ nav a {
 }
 
 /* سکشن‌ها */
-.full-width-section {
+section {
   width: 100%;
   padding: 5rem 3rem;
   background-color: var(--light-bg);
-  margin-bottom: 4rem;
-  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+section:nth-of-type(even) {
+  margin-bottom: 6rem;
+}
+
+section:nth-of-type(odd) {
+  margin-bottom: 2.5rem;
 }
 
 .grid-section {
@@ -141,14 +145,14 @@ nav a {
 
 ul {
   list-style: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 2;
   padding-left: 0;
   margin-top: 1.5rem;
 }
 
 ol {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   padding-left: 1.5rem;
   margin-top: 1.5rem;
@@ -161,7 +165,16 @@ ol {
   border-left: 5px solid var(--primary-color);
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 1.1rem;
+}
+
+.cta-block {
+  background: var(--light-bg);
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 footer {
@@ -174,7 +187,6 @@ footer {
   background-position: center;
   background-size: contain;
   position: relative;
-  width: 100%;
 }
 
 footer p {
@@ -192,25 +204,22 @@ footer p {
   }
 
   .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .cta-button {
     padding: 0.8rem 1.2rem;
   }
 
-  .full-width-section,
   .grid-section {
-    padding: 3rem 1.5rem;
     flex-direction: column;
-  }
-
-  .grid-section .text,
-  .grid-section .image {
-    flex: 1 1 100%;
   }
 
   .review-card {
     margin: 1rem;
+  }
+
+  section {
+    padding: 3rem 1.5rem;
   }
 }
