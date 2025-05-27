@@ -1,44 +1,31 @@
-:root {
-  --primary-color: #083c35;
-  --accent-color: #0f5d4d;
-  --light-bg: #ffffff;
-  --text-color: #222;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', sans-serif;
-  color: var(--text-color);
-  background: url('images/bg-solarfarm.jpg') no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-size: 1.2rem;
-  line-height: 1.8;
-}
-
-main {
-  flex: 1;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
-  background-color: var(--primary-color);
+  background-color: #083c35;
   color: white;
-  text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
 }
 
 nav {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -46,226 +33,59 @@ nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1rem;
 }
 
-.hero-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.bg-video {
-  position: absolute;
+.background-video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  height: auto;
 }
 
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
+.intro-text {
   text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  padding: 2rem;
+  font-size: 2rem;
+  padding: 1rem 2rem 0 2rem;
+  margin-bottom: 0;
 }
 
-.hero-content h1 {
-  font-size: 3.2rem;
-  margin-bottom: 1rem;
+.why-solar, .why-us, .steps, .testimonials {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  margin-top: 4rem;
 }
 
-.hero-content p {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
+.why-solar h3 {
+  color: #083c35;
 }
 
-.cta-button {
-  padding: 1rem 2rem;
-  background-color: var(--accent-color);
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: background 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #0a4a3e;
-}
-
-/* سکشن‌های اصلی */
-section {
+.infographic {
   width: 100%;
-  padding: 5rem 3rem;
-  background-color: var(--light-bg);
-}
-
-section:not(:last-of-type) {
-  margin-bottom: 4rem;
-}
-
-.grid-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.grid-section .text {
-  flex: 1 1 50%;
-}
-
-.grid-section .image {
-  flex: 1 1 40%;
-}
-
-.grid-section img {
-  width: 100%;
+  margin-top: 2rem;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-ul {
-  list-style: none;
-  font-size: 1.2rem;
-  line-height: 2;
-  padding-left: 0;
-  margin-top: 1.5rem;
-}
-
-ol {
-  font-size: 1.2rem;
-  line-height: 2;
+.steps ol {
   padding-left: 1.5rem;
-  margin-top: 1.5rem;
 }
 
-.review-card {
-  background: white;
-  margin: 1.5rem 0;
-  padding: 1.5rem;
-  border-left: 5px solid var(--primary-color);
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  border-radius: 6px;
-  font-size: 1.1rem;
-}
-
-.cta-block {
-  background: #ffffff;
-  padding: 3rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-  margin-top: 3rem;
-  text-align: center;
-}
-
-.cta-block h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-.cta-block p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-/* سکشن وسط بین ویدیو و متن */
-.cta-banner {
-  background: transparent;
+.booking-link {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #083c35;
   color: white;
-  text-align: center;
-  padding: 3rem 1rem 2rem;
-  font-weight: bold;
-  font-size: 1.8rem;
-  margin: 0;
-}
-
-.cta-banner h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.cta-banner p {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-/* قبل از بخش نصب فاصله بیشتر */
-.installation-steps {
-  margin-top: 6rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
 footer {
-  background-color: var(--primary-color);
+  background-color: #083c35;
   color: white;
   text-align: right;
-  padding: 5rem 2rem;
+  padding: 5rem 1rem;
   background-image: url('images/Profile3.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  position: relative;
-}
-
-footer p {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: rgba(0,0,0,0.4);
-  padding: 1rem;
-  border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1.3rem;
-  }
-
-  .cta-button {
-    padding: 0.8rem 1.2rem;
-  }
-
-  .grid-section {
-    flex-direction: column;
-  }
-
-  .grid-section .text,
-  .grid-section .image {
-    flex: 1 1 100%;
-  }
-
-  section {
-    padding: 3rem 1.5rem;
-  }
-
-  .review-card {
-    margin: 1rem 0;
-  }
-
-  .cta-banner h2 {
-    font-size: 2.2rem;
-  }
-
-  .cta-banner p {
-    font-size: 1.2rem;
-  }
 }
