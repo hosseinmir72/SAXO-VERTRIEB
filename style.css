@@ -106,7 +106,6 @@ nav a {
   background-color: #0a4a3e;
 }
 
-/* سکشن‌های اصلی */
 section {
   width: 100%;
   padding: 5rem 3rem;
@@ -185,29 +184,27 @@ ol {
   margin-bottom: 2rem;
 }
 
-/* سکشن وسط بین ویدیو و متن */
 .cta-banner {
   background: transparent;
   color: white;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 0 1rem 3rem;
   font-weight: bold;
   font-size: 1.8rem;
   margin: 0;
-  margin-top: -2rem;
 }
 
 .cta-banner h2 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .cta-banner p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin: 0;
 }
 
-/* قبل از بخش نصب فاصله بیشتر */
+/* نصب فاصله بیشتر */
 .installation-steps {
   margin-top: 6rem;
 }
